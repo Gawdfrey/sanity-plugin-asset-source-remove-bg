@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-no-bind */
 import React from 'react'
-import {Stack, Text, Badge, Inline, Button} from '@sanity/ui'
+import {Stack, Text, Badge, Inline} from '@sanity/ui'
 import {AccountResponse} from './types'
 
 function findCreditLevelSeverity(creditLevel: number) {
@@ -19,9 +19,9 @@ export default function CreditBalance({account}: {account: AccountResponse | und
         Remaining credits
       </Text>
       <Text>
-        Each credit is equivalent to one image transformed. Remove.bg also give you 50 preview image
-        transformations each month. A preview is a low-res versions of the transformed image, but is
-        fine for some use cases.
+        The price of each credits varies based on the image uploaded. Remove.bg also gives you 50
+        preview image transformations each month. A preview is a low-res versions of the transformed
+        image, but is fine for some use cases.
       </Text>
       <Inline space={[3, 3, 4]}>
         <Text>Previews left:</Text>
@@ -33,15 +33,7 @@ export default function CreditBalance({account}: {account: AccountResponse | und
           <Text weight="bold">{account?.credits.total}</Text>
         </Badge>
       </Inline>
-      <div>
-        <Button
-          padding={[3, 3, 4]}
-          tone="primary"
-          text="Purchase more"
-          aria-label="Go to remove.bg site to purchase more credits"
-          onClick={() => (window.location.href = 'https://remove.bg/pricing')}
-        />
-      </div>
+      <a href="https://remove.bg/pricing">Purchase more</a>
     </Stack>
   )
 }

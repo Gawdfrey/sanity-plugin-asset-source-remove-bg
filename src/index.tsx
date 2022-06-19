@@ -1,18 +1,27 @@
 import React from 'react'
-import {AssetSourceComponentProps, createPlugin} from 'sanity'
+import {AssetSource, AssetSourceComponentProps, ConfigContext, createPlugin, Role} from 'sanity'
 import Icon from './Icon'
 import RemoveBg from './RemoveBg'
+import {RemoveBgConfig} from './types'
 
-export interface RemoveBgConfig {
-  apiKey: string
+function hasRole(currentUser: ConfigContext['currentUser'], allowedUserRoles: string[]) {
+  const currentUserRoles = currentUser?.roles
+  if (!currentUserRoles) {
+    return false
+  }
+  return currentUserRoles.some((role: Role) => allowedUserRoles.includes(role.name))
 }
 
 export const removeBgAssetSourcePlugin = createPlugin<RemoveBgConfig>((config) => {
   return {
-    name: 'sanity-plugin-remove-bg-converter',
+    name: 'sanity-plugin-asset-source-remove-bg',
     form: {
       image: {
-        assetSources: (prev: any) => {
+        assetSources: (prev: AssetSource[], assetSourceProps: ConfigContext) => {
+          const {currentUser} = assetSourceProps
+          if (config?.allowedUserRoles && hasRole(currentUser, config.allowedUserRoles)) {
+            return prev
+          }
           return [
             ...prev,
             {

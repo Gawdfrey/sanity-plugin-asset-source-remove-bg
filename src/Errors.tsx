@@ -16,7 +16,7 @@ export default function Errors({errors, onClick}: {errors: Error[]; onClick: () 
         </Card>
       ))}
       <div>
-        <Button tone="primary" text="Try again" onClick={onClick} />
+        <Button padding={[3, 3, 4]} tone="primary" text="Try again" onClick={onClick} />
       </div>
     </Stack>
   )

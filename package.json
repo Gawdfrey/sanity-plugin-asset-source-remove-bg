@@ -1,5 +1,5 @@
 {
-  "name": "sanity-plugin-remove-bg-converter",
+  "name": "sanity-plugin-asset-source-remove-bg",
   "version": "1.0.0",
   "description": "Remove the background of your images with remove.bg API",
   "author": {
@@ -40,12 +40,12 @@
   "dependencies": {
     "@sanity/incompatible-plugin": "^0.0.1-studio-v3.1",
     "@sanity/ui": "^0.37.9",
-    "@types/react": "^18.0.14",
     "axios": "^0.27.2",
     "react": "^17.0.0",
     "sanity": "^3.0.0-dev-preview.7"
   },
   "devDependencies": {
+    "@types/react": "^18.0.14",
     "@parcel/packager-ts": "^2.6.0",
     "@parcel/transformer-typescript-types": "^2.6.0",
     "@sanity/plugin-kit": "^0.1.0-v3-studio.1",

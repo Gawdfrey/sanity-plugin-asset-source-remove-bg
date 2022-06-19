@@ -1,7 +1,12 @@
 import {AssetSourceComponentProps} from 'sanity'
-import {RemoveBgConfig} from '..'
+
+export interface RemoveBgConfig {
+  apiKey: string
+  allowedUserRoles?: string[]
+}
 
 export type RemoveBgProps = AssetSourceComponentProps & RemoveBgConfig
+
 export enum ImageFormat {
   PNG = 'png',
   JPG = 'jpg',
