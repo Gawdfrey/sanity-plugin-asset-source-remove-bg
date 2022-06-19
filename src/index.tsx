@@ -7,7 +7,7 @@ export interface RemoveBgConfig {
   apiKey: string
 }
 
-export const removeBg = createPlugin<RemoveBgConfig>((config) => {
+export const removeBgAssetSourcePlugin = createPlugin<RemoveBgConfig>((config) => {
   return {
     name: 'sanity-plugin-remove-bg-converter',
     form: {
@@ -19,6 +19,9 @@ export const removeBg = createPlugin<RemoveBgConfig>((config) => {
               name: 'remove-bg',
               title: 'Remove.bg',
               component: function component(props: AssetSourceComponentProps) {
+                if (props.selectedAssets.length === 0) {
+                  return null
+                }
                 return <RemoveBg {...props} {...config} />
               },
               icon: Icon,
