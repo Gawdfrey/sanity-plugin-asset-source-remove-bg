@@ -40,7 +40,7 @@ yarn add sanity-plugin-asset-source-remove-bg
 Parameters:
 
 - apiKey: String | Can be created here: [Remove.bg](https://remove.bg/dashboard#api-key)
-- allowedUserRoles: String[]
+- allowedUserRoles?: String[]
 
   Add it as a plugin in sanity.config.ts (or .js):
 
@@ -52,7 +52,8 @@ Parameters:
      /...
      plugins: [
          removeBgAssetSourcePlugin({
-             apiKey: "my-api-key"
+             apiKey: "my-api-key",
+             allowedUserRoles: ["administrator", "editor"]
          })
      ]
  })
