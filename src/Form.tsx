@@ -7,7 +7,6 @@ const imageFormats = [
   {value: ImageFormat.AUTO, label: 'Auto', name: 'auto'},
   {value: ImageFormat.PNG, label: 'PNG', name: 'png'},
   {value: ImageFormat.JPG, label: 'JPG', name: 'jpg'},
-  {value: ImageFormat.ZIP, label: 'ZIP', name: 'zip'},
 ]
 
 const imageSizes = [

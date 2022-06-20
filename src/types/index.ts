@@ -11,7 +11,6 @@ export enum ImageFormat {
   PNG = 'png',
   JPG = 'jpg',
   AUTO = 'auto',
-  ZIP = 'zip',
 }
 
 export enum ImageSize {
