@@ -19,9 +19,10 @@ _Caution: The service offers 50 free preview images each month, which are of a l
 **What might be added**
 
 - Set a custom background color or picture.
+- Batch conversion
 - ??? any suggestions?
 
-  ![Giphy Asset Source Modal](assets/giphy-asset-source.png)
+  ![Remove BG Asset Source](assets/remove-bg.gif)
 
 ## Installation
 
