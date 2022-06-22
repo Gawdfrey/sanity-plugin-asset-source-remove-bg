@@ -2,7 +2,7 @@
 
 > **NOTE**
 >
-> This is the **Sanity Studio v3 version** of sanity-plugin-asset-source-giphy.
+> This is the **Sanity Studio v3 version** of sanity-plugin-asset-source-remove-bg.
 
 ## What is it?
 
@@ -20,6 +20,7 @@ _Caution: The service offers 50 free preview images each month, which are of a l
 
 - Set a custom background color or picture.
 - Batch conversion
+- Uploading an image directly to the plugin for bg removal without storing it in the sanity library
 - ??? any suggestions?
 
   ![Remove BG Asset Source](assets/remove-bg.gif)
