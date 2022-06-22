@@ -1,6 +1,6 @@
 {
   "name": "sanity-plugin-asset-source-remove-bg",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "Remove the background of your images with remove.bg API through the sanity studio",
   "author": {
     "name": "Rein Undheim",
