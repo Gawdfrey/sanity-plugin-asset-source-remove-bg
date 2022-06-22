@@ -1,6 +1,6 @@
 {
   "name": "sanity-plugin-asset-source-remove-bg",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "Remove the background of your images with remove.bg API",
   "author": {
     "name": "Rein Undheim",
@@ -31,7 +31,8 @@
     "build": "parcel build --no-cache",
     "watch": "parcel watch",
     "link-watch": "plugin-kit link-watch",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "semantic-release": "semantic-release"
   },
   "repository": {},
   "engines": {
